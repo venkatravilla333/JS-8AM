@@ -156,3 +156,61 @@
 // console.log(b)
 // }
 // console.log(b)
+
+
+//Hoisting
+
+// console.log(a)
+// let a = 'sachin'
+// console.log(a)
+// console.log(b)
+// var b = 40
+// console.log(b)
+
+// console.log(c)
+// var c = true
+// console.log(c)
+// console.log(d)
+// var d
+// console.log(d)
+
+// console.log(e)
+// var e = null
+// console.log(e)
+
+// console.log(f)
+// var f = {
+//   name: 'kohli'
+// }
+// console.log(f)
+
+// console.log(g)
+// var g = [1, 2, 3]
+// console.log(g)
+
+// // console.log(h)
+// h()
+// let h = function test() {
+//   console.log('named function exp')
+// }
+// console.log(h)
+// h()
+
+// console.log(i)
+// var i = function() {
+//   console.log('anaymous function exp')
+// }
+// console.log(i)
+// console.log(j)
+// var j = function() {
+//   console.log('arrow function exp')
+// }
+// console.log(j)
+
+// console.log(declare)
+// declare()
+// function declare() {
+//   console.log('function declaration')
+// }
+// console.log(declare)
+// declare()
