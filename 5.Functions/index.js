@@ -214,3 +214,61 @@
 // }
 // console.log(declare)
 // declare()
+
+
+//var vs let vs const
+
+//scope
+
+//hoisting
+
+//redeclaration
+
+// var a = 10
+// console.log(a)
+// console.log(a)
+// console.log(a)
+// // var a = 20
+// const a = 20
+// console.log(a)
+// console.log(a)
+// console.log(a)
+
+//re-assignment
+
+// var a = 10
+// let a = 10
+// const a = 10
+// console.log(a)
+// a = 20
+// console.log(a)
+
+//initialization
+
+// var a
+// let a
+// const a = 10
+// console.log(a)
+
+// var a = 1
+// console.log(a)
+// function test() {
+//   // console.log(a)
+//   let a = 10
+//   console.log(a)
+// }
+// test()
+// console.log(a)
+
+//closure
+
+function outer() {
+  var a = 100
+ return function inner() {
+    console.log(a)
+  }
+  
+}
+
+var inner = outer()
+inner()
