@@ -262,13 +262,127 @@
 
 //closure
 
-function outer() {
-  var a = 100
- return function inner() {
-    console.log(a)
-  }
+// function outer() {
+//   var a = 100
+//  return function inner() {
+//     console.log(a)
+//   }
   
-}
+// }
 
-var inner = outer()
-inner()
+// var inner = outer()
+// inner()
+
+// let a = 10
+
+// (function test() {
+//   var a = 10
+//   console.log(a)
+// })()
+// console.log(a)
+
+
+// //without curry
+
+// function test(a,b,c) {
+//   console.log(a + b + c)
+// }
+
+// test(10, 20, 30)
+
+// //with curry
+
+// function funA(a) {
+//   return function funB(b){
+//     return function funC(c) {
+//       console.log(a + b + c)
+      
+//      }
+//   }
+// }
+// funA(10)(20)(30)
+// // var funB = funA(10)
+// // var funC = funB(20)
+// // funC(30)
+
+//without curry
+
+// function calDis(price, dis) {
+//   var disAmout = price * dis
+//   console.log(disAmout)
+// }
+
+// calDis(1000, .1)
+// calDis(1000, .2)
+// calDis(1000, .3)
+// calDis(1000, .4)
+// calDis(1000, .5)
+
+// //with curry
+
+// function calPrice(price) {
+//   return function calDis(dis) {
+//     var disAmout = price * dis
+//     console.log(disAmout)
+//   }
+// }
+// var calDis = calPrice(1000)
+// calDis(.1)
+// calDis(.2)
+// calDis(.3)
+// calDis(.4)
+// calDis(.5)
+
+//FCF
+
+// var a = function test(cb) {
+//   console.log(cb)
+//   return function hello() {
+    
+//   }
+// }
+// a(function cb(){})
+
+//HOF
+
+// function a(b) {
+//   console.log('fun a')
+//   b()
+//   function c() {
+//     console.log('fun c')
+//   }
+//   c()
+// }
+// a(function b() {
+//   console.log('fun b')
+// })
+
+//pure vs impure
+
+// function pure(a,b,c) {
+//   console.log(a + b + c)
+  
+// }
+// pure(10, 20, 30)
+
+// function impure(a, b, c) {
+//   var d = Math.random()*10
+//   console.log(a + b + c + d)
+  
+// }
+// impure(10,20,30)
+
+
+//function recursion
+
+
+// function factorial(n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+
+// let result = factorial(5);
+// console.log(result);
