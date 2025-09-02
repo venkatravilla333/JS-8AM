@@ -122,24 +122,98 @@ var person1 = {
 
 //with using loop
 
-console.log(person1)
+// console.log(person1)
 
-//for in loop
+// //for in loop
 
-// for (var key in person1) {
-//   console.log(key, person1[key])
+// // for (var key in person1) {
+// //   console.log(key, person1[key])
+// // }
+
+// // keys
+
+// var keys = Object.keys(person1)
+// console.log(keys)
+
+// //values
+// var values = Object.values(person1)
+// console.log(values)
+
+// //entries
+// var values = Object.entries(person1)
+// console.log(values)
+
+// import lodash from 'lodash'
+
+// var lodash = require('lodash') //node js
+
+// var originalObj = {
+//   name: 'sachin',
+//   address: { road: 101 },
+//   play: function () {
+//     console.log('play')
+//   }
 // }
 
-// keys
+// var copiedObj = originalObj //normal copy
+// var copiedObj = Object.assign({}, originalObj) //shallow copy (ES-5)
+// var copiedObj = {...originalObj} //shallow copy (ES-6)
+// var copiedObj = JSON.parse(JSON.stringify(originalObj)) //deep copy
+// var copiedObj = lodash.cloneDeep(originalObj) //deep copy
 
-var keys = Object.keys(person1)
-console.log(keys)
 
-//values
-var values = Object.values(person1)
-console.log(values)
+// copiedObj.name = 'kohli'
+// copiedObj.address.road = 201
+// console.log(originalObj)
+// console.log(copiedObj)
 
-//entries
-var values = Object.entries(person1)
-console.log(values)
+//primitives
+
+// var a = 10
+
+// var b = a
+// b = 20
+// console.log(a)
+// console.log(b)
+
+//Math object
+
+// console.log(Math)
+// console.log(Math.min(10, 20, 15))
+// console.log(Math.max(10, 20, 15))
+// console.log(Math.ceil(10.1))
+// console.log(Math.ceil(10.9))
+// console.log(Math.floor(10.1))
+// console.log(Math.floor(10.9))
+// console.log(Math.round(10.5))
+// console.log(Math.round(10.9))
+// console.log(Math.round(10.4))
+// console.log(Math.random()*100)
+// console.log(Math.sqrt(25))
+// console.log(Math.pow(3, 3))
+
+//Date object
+
+// var now = new Date()
+
+//number format
+// var now = new Date(2045, 11, 10, 10, 10, 10)
+
+//string format
+// var now = new Date('2050 11 15 10:10:10')
+
+// console.log(now)
+
+// console.log(now.getFullYear())
+// console.log(now.getDate())
+// console.log(now.getMonth())
+// console.log(now.getHours())
+// console.log(now.getMinutes())
+// console.log(now.getSeconds())
+
+// now.setFullYear(2040)
+// now.setMonth(7)
+// console.log(now.getFullYear())
+// console.log(now.getMonth())
+
 
