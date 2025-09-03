@@ -216,4 +216,125 @@ var person1 = {
 // console.log(now.getFullYear())
 // console.log(now.getMonth())
 
+//template string
 
+//with out using template string (ES-5)
+
+// var name = 'sachin'
+// var age = 40
+
+// console.log('Hi this is' + ' ' + name + ' ' + 'my age is' + ' ' + age)
+
+// //with using template string
+
+// console.log(`Hi this is ${name} my age is ${age}`)
+
+
+// console.log(this)
+
+// function test1 () {
+//   console.log(this)
+// }
+// test1()
+
+// var test2 = ()=> {
+//   console.log(this)
+// }
+// test2()
+
+// var person = {
+//   name: 'sachin',
+//   outer1: function () {
+//     console.log(this)
+//     var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   },
+//   outer2:  ()=> {
+//     console.log(this)
+//      var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   }
+
+// }
+
+// person.outer1()
+// person.outer2()
+
+
+// function Test(name) {
+//   console.log(this)
+//   this.name = name;
+//   this.outer1 = function () {
+//     console.log(this)
+//     var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   };
+//   this.outer2 = ()=> {
+//     console.log(this)
+//      var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   }
+// }
+
+// var person = new Test('sachin')
+
+// person.outer1()
+// person.outer2()
+
+
+class Test{
+  constructor(name) {
+    console.log(this)
+    this.name = name;
+    this.outer1 = function () {
+      console.log(this)
+      var inner1 = function () {
+        console.log(this)
+      }
+      inner1()
+      var inner2 = ()=> {
+        console.log(this)
+      }
+      inner2()
+    }
+    this.outer2 =  ()=> {
+      console.log(this)
+      var inner1 = function () {
+        console.log(this)
+      }
+      inner1()
+      var inner2 = ()=> {
+        console.log(this)
+      }
+      inner2()
+    }
+  }
+}
+
+var person = new Test('sachin')
+person.outer1()
+person.outer2()

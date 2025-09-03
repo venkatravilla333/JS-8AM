@@ -1060,14 +1060,13 @@ Template Strings
 String Templates
 
 => Template strings are a powerful feature of modern JavaScript released in ES6. 
-=> It lets you insert variables and expressions into strings without needing to 
-   concatenate + like in older versions of JavaScript. 
+=> It lets you insert variables and expressions into strings without needing to concatenate + like in older versions of JavaScript. 
 => It allows us to create strings that are complex and contain dynamic elements.
 => Template Literals use back-ticks (``) rather than the quotes ("") to define a string.
 => Template literals allows multiline strings.
 
-   
- syntax:   `${}`
+var x = 100
+ syntax:   `hello ${x}`
 
 
 
