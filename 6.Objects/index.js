@@ -306,35 +306,215 @@ var person1 = {
 // person.outer2()
 
 
-class Test{
-  constructor(name) {
-    console.log(this)
-    this.name = name;
-    this.outer1 = function () {
-      console.log(this)
-      var inner1 = function () {
-        console.log(this)
-      }
-      inner1()
-      var inner2 = ()=> {
-        console.log(this)
-      }
-      inner2()
-    }
-    this.outer2 =  ()=> {
-      console.log(this)
-      var inner1 = function () {
-        console.log(this)
-      }
-      inner1()
-      var inner2 = ()=> {
-        console.log(this)
-      }
-      inner2()
-    }
-  }
-}
+// class Test{
+//   constructor(name) {
+//     console.log(this)
+//     this.name = name;
+//     this.outer1 = function () {
+//       console.log(this)
+//       var inner1 = function () {
+//         console.log(this)
+//       }
+//       inner1()
+//       var inner2 = ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//     this.outer2 =  ()=> {
+//       console.log(this)
+//       var inner1 = function () {
+//         console.log(this)
+//       }
+//       inner1()
+//       var inner2 = ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//   }
+// }
 
-var person = new Test('sachin')
-person.outer1()
-person.outer2()
+// var person = new Test('sachin')
+// person.outer1()
+// person.outer2()
+
+// var person = {
+//   name: 'kohli',
+//   age: 35
+// }
+
+// function test(a,b,c) {
+//   console.log(this)
+//   console.log(a,b,c)
+// }
+// var test = (a,b,c)=> {
+//   console.log(this)
+//   console.log(a,b,c)
+// }
+// test(1,2,3)
+// test.call(person, 1,2,3)
+// test.apply(person, [1,2,3])
+// test.bind(person, 1,2,3)()
+
+
+// var person = {
+//   name: 'sachin',
+//   outer1: function () {
+//     console.log(this)
+//     var inner1 = ()=> {
+//       console.log(this)
+//     }
+//     inner1()
+//     // inner1.call(person)
+//     // inner1.apply(person)
+//     // inner1.bind(person)()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   },
+//   outer2:  ()=> {
+//     console.log(this)
+//      var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   }
+
+// }
+
+// person.outer1()
+// person.outer2()
+
+
+// function Test(name) {
+//   console.log(this)
+//   this.name = name;
+//   this.outer1 = function () {
+//     console.log(this)
+//     var inner1 =  ()=> {
+//       console.log(this)
+//     }
+//     inner1()
+//     // inner1.call(person)
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   };
+//   this.outer2 = ()=> {
+//     console.log(this)
+//      var inner1 = function () {
+//       console.log(this)
+//     }
+//     inner1()
+//     var inner2 = ()=> {
+//       console.log(this)
+//     }
+//     inner2()
+//   }
+// }
+
+// var person = new Test('sachin')
+
+// person.outer1()
+// person.outer2()
+
+
+// class Test{
+//   constructor(name) {
+//     console.log(this)
+//     this.name = name;
+//     this.outer1 = function () {
+//       console.log(this)
+//       var inner1 = ()=> {
+//         console.log(this)
+//       }
+//       inner1()
+//       // inner1.call(person)
+//       var inner2 = ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//     this.outer2 =  ()=> {
+//       console.log(this)
+//       var inner1 = function () {
+//         console.log(this)
+//       }
+//       inner1()
+//       var inner2 = ()=> {
+//         console.log(this)
+//       }
+//       inner2()
+//     }
+//   }
+// }
+
+// var person = new Test('sachin')
+// person.outer1()
+// person.outer2()
+
+
+// var msg = 'HI how are you you'
+
+// console.log(new String())
+
+// console.log(msg)
+// console.log(msg.length)
+// console.log(msg.trim().length)
+// console.log(msg.trimStart().length)
+// console.log(msg.trimEnd().length)
+// console.log(msg.slice())
+// console.log(msg.slice(0))
+// console.log(msg.slice(0, 2))
+// console.log(msg.slice(-3))
+// console.log(msg.substring())
+// console.log(msg.substring(0))
+// console.log(msg.substring(0, 2))
+// console.log(msg.substring(-3))
+// console.log(msg.charAt(0))
+// console.log(msg.charCodeAt(0))
+// console.log(msg.toUpperCase())
+// console.log(msg.toLowerCase())
+// console.log(msg.concat('sachin'))
+// console.log(msg.replace('you', 'me'))
+// console.log(msg.replaceAll('you', 'me'))
+// var arr = msg.split()
+// console.log(arr, typeof arr)
+// var str = arr.join()
+// console.log(str, typeof str)
+// var arr = msg.split('')
+// var arr = msg.split(' ')
+// console.log(arr, typeof arr)
+
+// var msg = 'Hi'
+
+// console.log(msg.padStart(5, 22))
+// console.log(msg.padEnd(5, 'a'))
+
+// var msg = 'Hi how are you Hi'
+
+// console.log(msg.indexOf('Hi'))
+// console.log(msg.indexOf('Bye'))
+// console.log(msg.lastIndexOf('Hi'))
+// console.log(msg.lastIndexOf('Bye'))
+// console.log(msg.includes('Hi'))
+// console.log(msg.includes('Bye'))
+// console.log(msg.startsWith('Hi'))
+// console.log(msg.startsWith('Bye'))
+// console.log(msg.endsWith('Hi'))
+// console.log(msg.endsWith('you'))
+
+
+
+
+
+
+
+
