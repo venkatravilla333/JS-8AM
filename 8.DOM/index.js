@@ -44,7 +44,7 @@
 
 //traversing of dom
 
-var currentElement = document.getElementById('current')
+// var currentElement = document.getElementById('current')
 // console.log(currentElement)
 // currentElement.style.background = 'red'
 
@@ -75,8 +75,8 @@ var currentElement = document.getElementById('current')
 // lastChild.style.background = 'green'
 // lastChild.style.color = 'yellow'
 
-var allChilds= currentElement.children
-console.log(allChilds)
+// var allChilds= currentElement.children
+// console.log(allChilds)
 // allChilds[0].style.background = 'red'
 // allChilds[1].style.background = 'red'
 // allChilds[2].style.background = 'red'
@@ -90,6 +90,91 @@ console.log(allChilds)
 //   element.style.width = '300px'
 //   element.style.height = '300px'
 // }
+
+//How to arttach events to dom elements
+
+// var button = document.getElementById('btn')
+// console.log(button)
+
+// function btnClick() {
+//   console.log('clicked')
+// }
+
+// button.addEventListener('click', btnClick)
+
+//DOM MANIPULATION (ADD, UPDATE, DELETE)
+
+//ADDING
+
+// var para = document.createElement('p')
+// console.log(para)
+
+// para.innerText = 'This is para'
+
+// var parent = document.getElementById('parent')
+// console.log(parent)
+
+// parent.appendChild(para)
+
+// var h1 = document.createElement('h1')
+// console.log(h1)
+
+// h1.innerText = 'This is heading'
+
+// parent.appendChild(h1)
+// parent.insertBefore(h1, para)
+
+// var parent = document.getElementById('parent')
+
+// var para = document.createElement('p')
+// para.innerText = 'This is para'
+
+// function addFun() {
+// parent.appendChild(para)
+// }
+// var button = document.getElementById('add')
+
+// button.addEventListener('click', addFun)
+
+
+// //Replace
+
+// var h4 = document.createElement('h4')
+
+// h4.innerText = 'Heading four'
+
+// var replaceBtn = document.getElementById('replace')
+
+// function replaceFun() {
+//   parent.replaceChild(h4, para)
+  
+// }
+
+// replaceBtn.addEventListener('click', replaceFun)
+
+// //Delete
+
+// var deleteBtn = document.getElementById('delete')
+
+
+// function deleteFun() {
+//   // h4.remove()
+//   parent.removeChild(h4)
+// }
+
+// deleteBtn.addEventListener('click', deleteFun)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
