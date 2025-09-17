@@ -82,13 +82,125 @@
 
 // async function displayData() {
 //  var data1 = await  fetchData(2)
-//   console.log(data1) 
+//   console.log(data1)
 //  var data2 = await  fetchData(data1)
-//   console.log(data2) 
+//   console.log(data2)
 //  var data3 = await  fetchData(data2)
-//   console.log(data3) 
+//   console.log(data3)
 //  var data4 = await  fetchData(data3)
-//   console.log(data4) 
+//   console.log(data4)
  
 // }
 // displayData()
+
+
+//api calls
+
+//get request
+
+
+   
+var getDataButton = document.getElementById('getdata')
+
+var parent = document.getElementById('parent')
+
+
+
+
+function getDataFun() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((res) => {
+    console.log(res)
+   return res.json()
+  }).then((data) => {
+    console.log(data)
+    data.forEach((obj) => {
+      var para = document.createElement('p')
+      console.log(para)
+      para.textContent = `${obj.title}`
+      parent.appendChild(para)
+    })
+    // para.innerText = data.title
+  })
+}
+
+getDataButton.addEventListener('click', getDataFun)
+
+
+//post request
+
+var newpost = {
+  userId: 200,
+  title: 'my title',
+  body: 'my body'
+}
+
+
+
+var sendDataButton = document.getElementById('senddata')
+
+function sendDataFun() {
+  console.log('hi')
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-type': 'Application/json',
+  },
+  body: JSON.stringify(newpost)
+}).then((res) => {
+  console.log(res)
+  return res.json()
+}).then((data) => {
+  console.log(data)
+})
+}
+
+sendDataButton.addEventListener('click', sendDataFun)
+
+//update request (put)
+
+var newpost = {
+  userId: 200,
+  title: 'hello ap',
+  body: 'my body'
+}
+
+
+
+var updateDataButton = document.getElementById('updatedata')
+
+function updateDataFun() {
+  console.log('hi')
+  fetch('https://jsonplaceholder.typicode.com/posts/10', {
+  method: 'PUT',
+  headers: {
+    'Content-type': 'Application/json',
+  },
+  body: JSON.stringify(newpost)
+}).then((res) => {
+  console.log(res)
+  return res.json()
+}).then((data) => {
+  console.log(data)
+})
+}
+
+updateDataButton.addEventListener('click', updateDataFun)
+
+//delete request
+
+var deleteDataButton = document.getElementById('deletedata')
+function deleteDataFun() {
+  console.log('hi')
+  fetch('https://jsonplaceholder.typicode.com/posts/20', {
+  method: 'DELETE',
+}).then((res) => {
+  console.log(res)
+  return res.json()
+}).then((data) => {
+  console.log(data)
+})
+}
+
+deleteDataButton.addEventListener('click', deleteDataFun)
+
