@@ -100,107 +100,132 @@
 
 
    
-var getDataButton = document.getElementById('getdata')
+// var getDataButton = document.getElementById('getdata')
 
-var parent = document.getElementById('parent')
-
-
-
-
-function getDataFun() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-  .then((res) => {
-    console.log(res)
-   return res.json()
-  }).then((data) => {
-    console.log(data)
-    data.forEach((obj) => {
-      var para = document.createElement('p')
-      console.log(para)
-      para.textContent = `${obj.title}`
-      parent.appendChild(para)
-    })
-    // para.innerText = data.title
-  })
-}
-
-getDataButton.addEventListener('click', getDataFun)
-
-
-//post request
-
-var newpost = {
-  userId: 200,
-  title: 'my title',
-  body: 'my body'
-}
+// var parent = document.getElementById('parent')
 
 
 
-var sendDataButton = document.getElementById('senddata')
 
-function sendDataFun() {
-  console.log('hi')
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  headers: {
-    'Content-type': 'Application/json',
-  },
-  body: JSON.stringify(newpost)
-}).then((res) => {
-  console.log(res)
-  return res.json()
-}).then((data) => {
-  console.log(data)
-})
-}
+// function getDataFun() {
+//   fetch('https://jsonplaceholder.typicode.com/posts')
+//   .then((res) => {
+//     console.log(res)
+//    return res.json()
+//   }).then((data) => {
+//     console.log(data)
+//     data.forEach((obj) => {
+//       var para = document.createElement('p')
+//       console.log(para)
+//       para.textContent = `${obj.title}`
+//       parent.appendChild(para)
+//     })
+//     // para.innerText = data.title
+//   })
+// }
 
-sendDataButton.addEventListener('click', sendDataFun)
-
-//update request (put)
-
-var newpost = {
-  userId: 200,
-  title: 'hello ap',
-  body: 'my body'
-}
+// getDataButton.addEventListener('click', getDataFun)
 
 
+// //post request
 
-var updateDataButton = document.getElementById('updatedata')
+// var newpost = {
+//   userId: 200,
+//   title: 'my title',
+//   body: 'my body'
+// }
 
-function updateDataFun() {
-  console.log('hi')
-  fetch('https://jsonplaceholder.typicode.com/posts/10', {
-  method: 'PUT',
-  headers: {
-    'Content-type': 'Application/json',
-  },
-  body: JSON.stringify(newpost)
-}).then((res) => {
-  console.log(res)
-  return res.json()
-}).then((data) => {
-  console.log(data)
-})
-}
 
-updateDataButton.addEventListener('click', updateDataFun)
 
-//delete request
+// var sendDataButton = document.getElementById('senddata')
 
-var deleteDataButton = document.getElementById('deletedata')
-function deleteDataFun() {
-  console.log('hi')
-  fetch('https://jsonplaceholder.typicode.com/posts/20', {
-  method: 'DELETE',
-}).then((res) => {
-  console.log(res)
-  return res.json()
-}).then((data) => {
-  console.log(data)
-})
-}
+// function sendDataFun() {
+//   console.log('hi')
+//   fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: 'POST',
+//   headers: {
+//     'Content-type': 'Application/json',
+//   },
+//   body: JSON.stringify(newpost)
+// }).then((res) => {
+//   console.log(res)
+//   return res.json()
+// }).then((data) => {
+//   console.log(data)
+// })
+// }
 
-deleteDataButton.addEventListener('click', deleteDataFun)
+// sendDataButton.addEventListener('click', sendDataFun)
 
+// //update request (put)
+
+// var newpost = {
+//   userId: 200,
+//   title: 'hello ap',
+//   body: 'my body'
+// }
+
+
+
+// var updateDataButton = document.getElementById('updatedata')
+
+// function updateDataFun() {
+//   console.log('hi')
+//   fetch('https://jsonplaceholder.typicode.com/posts/10', {
+//   method: 'PUT',
+//   headers: {
+//     'Content-type': 'Application/json',
+//   },
+//   body: JSON.stringify(newpost)
+// }).then((res) => {
+//   console.log(res)
+//   return res.json()
+// }).then((data) => {
+//   console.log(data)
+// })
+// }
+
+// updateDataButton.addEventListener('click', updateDataFun)
+
+// //delete request
+
+// var deleteDataButton = document.getElementById('deletedata')
+// function deleteDataFun() {
+//   console.log('hi')
+//   fetch('https://jsonplaceholder.typicode.com/posts/20', {
+//   method: 'DELETE',
+// }).then((res) => {
+//   console.log(res)
+//   return res.json()
+// }).then((data) => {
+//   console.log(data)
+// })
+// }
+
+// deleteDataButton.addEventListener('click', deleteDataFun)
+
+// var Pr1 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej('Pr-1')
+//   }, 4000)
+// })
+// var Pr2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej('Pr2')
+//   }, 1000)
+// })
+// var Pr3 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej('Pr-3')
+//   }, 2000)
+// })
+
+// Promise.all([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
+// Promise.allSettled([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
+// Promise.race([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
+// Promise.any([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
+
+// import  {test1}  from './module2.js'
+// import hello from './module2.js'
+// console.log(hello)
+// test()
