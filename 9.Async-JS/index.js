@@ -225,7 +225,3 @@
 // Promise.race([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
 // Promise.any([Pr1, Pr2, Pr3]).then((res)=>{console.log(res)})
 
-// import  {test1}  from './module2.js'
-// import hello from './module2.js'
-// console.log(hello)
-// test()
