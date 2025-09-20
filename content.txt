@@ -1930,3 +1930,158 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 
 
+14) ES-6 Modules
+================
+
+  - Consider a scenario where parts of JavaScript code need to be reused. ES6 comes to rescue with the concept of Modules.
+  - A module organizes a related set of JavaScript code. A module can contain variables and functions. 
+  - A module is nothing but a chunk of JavaScript code written in a file. 
+  - By default, variables and functions of a module are not available for use. 
+  - Variables and functions within a module should be exported so that they can be accessed (imported) from within other files. 
+
+   Named Exports
+   -------------
+   Named exports are distinguished by their names. There can be several named exports in a module. A module can export selected components using the syntax given below −
+
+Syntax 1
+--------
+
+-using multiple export keyword
+
+export component1
+export component2
+...
+...
+export componentN
+
+Syntax 2
+--------
+
+Alternatively, components in a module can also be exported using a single export keyword with {} binding syntax as shown below −
+
+-using single export keyword
+
+export {component1,component2,....,componentN}
+
+
+Default Exports
+---------------
+Modules that need to export only a single value can use default exports. There can be only one default export per module.
+
+Syntax
+------
+export default component_name
+
+However, a module can have one default export and multiple named exports at the same time.
+
+Importing Named Exports
+-----------------------
+
+While importing named exports, the names of the corresponding components must match.
+
+Syntax
+
+import {component1,component2..componentN} from module_name
+
+However, while importing named exports, they can be renamed using the as keyword. 
+
+import {original_component_name as new_component_name }
+
+
+Importing Default Exports
+-------------------------
+
+Unlike named exports, a default export can be imported with any name.
+
+Syntax
+------
+
+import any_variable_name from module_name
+
+Note: We have to do extra 2 tasks 1) type: "module" 2) add .js to file extension
+
+
+
+15) ES-6 Tooling
+================
+
+1) Babel
+   -----
+
+   => Babel is a transpiler for ES6 to ES5, so that browser can understand the JS.
+   => Babel can convert the advanced js and jsx into pure js, which is understand by browser.
+   => It allows web developers to take advantage of the newest features of the JS language.
+
+    This is just for example to show how babel work
+
+     ==> npm init --yes
+
+     ==> npm i babel-cli babel-core babel-preset-env
+
+     ==> Create build folder
+
+     ==> In scripts:  "babel": "babel --presets env index.js -o build/hello.js"
+
+     ==> npm run babel
+
+   Note: It will create new js file in build folder with ES-5 syntax, We mensioned index.js file in script to run, But if we have more files to run we need to add more files. Solution for this is we have to use Webpack it will take all files at a time and convert into ES-5 them make these files into bundle. Before creating bundle, each file will be taken by babel to convert into ES-5. After completion of conversion, all files  will be bundled by webpack. 
+
+2) Webpack
+   -------
+ 
+   => Webpack is an open-source JavaScript module bundler. It is a build tool that is primarily used for bundling assets of a web application, such as JavaScript files, CSS stylesheets, and images. Webpack takes various modules and their dependencies and bundles them into a single or multiple output files, typically optimized for deployment in a web browser.
+
+   => Webpack can also optimize code and assets for production, reducing the file size of the application and improving performance.
+ 
+   Note: Webapack runs our code through babel and code is converted to ES-5.
+
+
+
+16) ES-6 Destruturing
+=====================
+
+- Destructuring is a JavaScript expression that unpacks values from data structures (arrays / objects) into individual variables.
+
+1) Objects
+
+2) Arrays
+
+
+
+22) Web storage (HTML-5)
+    ====================
+
+    1) local storage
+
+     - The localStorage object allows you to save/store data in key/value pairs in the browser.
+
+     - The localStorage object stores data with no expiration date. 
+
+     - The data is not deleted when the browser is closed, and are available for future sessions.
+
+     - The storage capacity of local storage is upto 10MB.
+
+  => Save Data to Local Storage
+
+     localStorage.setItem(key, value);
+
+  => Read Data from Local Storage
+
+     localStorage.getItem(key);
+
+  => Remove Data from Local Storage
+
+     localStorage.removeItem(key);
+
+  => Remove All (Clear Local Storage)
+
+     localStorage.clear();
+.
+
+    2) session storage
+
+     - The sessionStorage Object which stores data for one session.
+
+     - The data is deleted when the browser window is closed.
+    
+     - The storage capacity of session storage is 5MB
